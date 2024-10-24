@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],  // Added DOM libraries needed for React
+    "module": "ESNext",
+    "skipLibCheck": true,
+    
+    /* Bundler mode */
+    "moduleResolution": "Bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    
+    /* React specific */
+    "jsx": "react-jsx",            // Added for React JSX support
+    "baseUrl": ".",               // Added for import path resolution
+    "paths": {                    // Added for @ imports
+      "@/*": ["src/*"]
+    },
+    
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+    
+    /* Additional type checking */
+    "resolveJsonModule": true,    // Added for JSON imports
+    "esModuleInterop": true,      // Added for import compatibility
+    "allowSyntheticDefaultImports": true  // Added for import compatibility
+  },
+  "include": [
+    "vite.config.ts",
+    "src/**/*.ts",               // Added for TypeScript files
+    "src/**/*.tsx",              // Added for React component files
+    "src/**/*.d.ts"             // Added for declaration files
+  ]
+}
